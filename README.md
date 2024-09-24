@@ -115,13 +115,17 @@ sudo ln -s g++-9 g++
 
 ```bash
 cd /home/env
-wget -c https://github.com/Kitware/CMake/releases/download/v3.21.4/cmake-3.21.4.tar.gz
-tar -xvzf cmake-3.21.4.tar.gz
-cd cmake-3.21.4
-chmod 777 ./configure
+# wget -c https://github.com/Kitware/CMake/releases/download/v3.21.4/cmake-3.21.4.tar.gz
+https://github.com/Kitware/CMake/releases/download/v3.21.4/cmake-3.21.4-linux-x86_64.tar.gz
+tar -xvzf cmake-3.21.4-linux-x86_64.tar.gz
+cd cmake-3.21.4-linux-x86_64
 ```
 
-```bash
+接下来根据[Linux下 gcc/g++ 版本切换与CMake各版本安装](https://blog.csdn.net/qq_43743126/article/details/109787923)成功安装高版本
+
+```
+以下内容为踩坑
+chmod 777 ./configure
 find /usr/include -name "io.h"
 ln -s /usr/include/sys/io.h /usr/include/
 # ./configure 报错Failed to find GL/gl.h
