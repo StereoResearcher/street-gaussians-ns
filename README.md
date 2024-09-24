@@ -200,7 +200,8 @@ For segments generating, which is necessary to model sky, ***Mask2Former*** is r
 ```bash
 cd dependencies/detectron2
 pip install -e .
-
+cd ..
+cd ..
 cd dependencies/Mask2Former
 pip install -r requirements.txt
 cd mask2former/modeling/pixel_decoder/ops
