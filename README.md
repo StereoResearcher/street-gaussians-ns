@@ -88,6 +88,34 @@ pip install --upgrade pip
 Install PyTorch with CUDA (this repo has been tested with CUDA 11.8) and [tiny-cuda-nn](https://github.com/NVlabs/tiny-cuda-nn).
 `cuda-toolkit` is required for building `tiny-cuda-nn`.
 
+要安装tiny-cuda-nn，要确保1.GCC/G++ 8 or higher；2.CUDA 10.2 or higher；3.CMake v3.21 or higher.
+
+```bash
+apt-get install build-essential git
+g++ --version
+gcc -v
+```
+
+gcc/g++升级
+
+```bash
+apt-get install software-properties-common
+apt-get update
+apt-get install gcc-9
+apt-get install g++-9
+```
+
+For CUDA 11.7 (Ours):
+
+先[安装cmake](https://blog.csdn.net/MrWangHao/article/details/133763563),再[本地编译tiny-cuda-nn](https://blog.csdn.net/qq_45934285/article/details/140332600)。
+
+tiny-cuda-nn本地编译命令
+
+```bash
+conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.7 -c pytorch -c nvidia
+pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
+```
+
 For CUDA 11.8:
 
 ```bash
@@ -96,14 +124,6 @@ pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https
 conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit
 pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
 ```
-
-For CUDA 11.7 (Ours):
-
-```bash
-conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.7 -c pytorch -c nvidia
-pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
-```
-
 
 Install nerfstudio.
 
