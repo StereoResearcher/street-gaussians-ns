@@ -119,8 +119,25 @@ wget -c https://github.com/Kitware/CMake/releases/download/v3.21.4/cmake-3.21.4.
 tar -xvzf cmake-3.21.4.tar.gz
 cd cmake-3.21.4
 chmod 777 ./configure
-# find /usr/include -name "io.h"
-# ln -s /usr/include/sys/io.h /usr/include/
+```
+
+```bash
+find /usr/include -name "io.h"
+ln -s /usr/include/sys/io.h /usr/include/
+# ./configure 报错Failed to find GL/gl.h
+add-apt-repository ppa:xorg-edgers/ppa
+apt-get install mesa-common-dev
+# 报错
+The following packages have unmet dependencies:
+libx11-dev : Depends: libx11-dev
+# 执行
+apt-get purge libcurl4
+apt-get install curl
+# 继续报错，尝试卸载cmake
+sudo apt remove cmake
+```
+
+```bash
 ./configure
 make
 sudo make install
