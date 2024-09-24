@@ -96,7 +96,7 @@ g++ --version
 gcc -v
 ```
 
-gcc/g++升级
+[gcc/g++升级](https://blog.csdn.net/lingyunxianhe/article/details/95963862)
 
 ```bash
 apt-get install software-properties-common
