@@ -140,9 +140,7 @@ apt-get purge libcurl4
 apt-get install curl
 # 继续报错，尝试卸载cmake
 sudo apt remove cmake
-```
 
-```bash
 ./configure
 make
 sudo make install
