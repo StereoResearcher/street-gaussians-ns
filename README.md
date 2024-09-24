@@ -111,6 +111,24 @@ sudo rm g++
 sudo ln -s g++-9 g++
 ```
 
+[cmake升级](https://blog.csdn.net/qq_21570025/article/details/133924930)
+
+```bash
+cd /home/env
+wget -c https://github.com/Kitware/CMake/releases/download/v3.29.8/cmake-3.29.8.tar.gz
+tar -xvzf cmake-3.29.8.tar.gz
+cd cmake-3.29.8
+chmod 777 ./configure
+find /usr/include -name "io.h"
+ln -s /usr/include/sys/io.h /usr/include/
+./configure
+make
+sudo make install
+
+sudo update-alternatives --install /usr/bin/cmake cmake /usr/local/bin/cmake 1 --force
+cmake --version
+```
+
 For CUDA 11.7 (Ours):
 
 先[安装cmake](https://blog.csdn.net/MrWangHao/article/details/133763563),再[本地编译tiny-cuda-nn](https://blog.csdn.net/qq_45934285/article/details/140332600)。
