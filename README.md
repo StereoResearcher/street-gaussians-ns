@@ -103,6 +103,12 @@ apt-get install software-properties-common
 apt-get update
 apt-get install gcc-9
 apt-get install g++-9
+
+cd /usr/bin 
+sudo rm gcc 
+sudo ln -s gcc-9 gcc 
+sudo rm g++ 
+sudo ln -s g++-9 g++
 ```
 
 For CUDA 11.7 (Ours):
