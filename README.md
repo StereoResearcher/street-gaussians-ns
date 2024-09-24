@@ -115,12 +115,12 @@ sudo ln -s g++-9 g++
 
 ```bash
 cd /home/env
-wget -c https://github.com/Kitware/CMake/releases/download/v3.29.8/cmake-3.29.8.tar.gz
-tar -xvzf cmake-3.29.8.tar.gz
-cd cmake-3.29.8
+wget -c https://github.com/Kitware/CMake/releases/download/v3.21.4/cmake-3.21.4.tar.gz
+tar -xvzf cmake-3.21.4.tar.gz
+cd cmake-3.21.4
 chmod 777 ./configure
-find /usr/include -name "io.h"
-ln -s /usr/include/sys/io.h /usr/include/
+# find /usr/include -name "io.h"
+# ln -s /usr/include/sys/io.h /usr/include/
 ./configure
 make
 sudo make install
