@@ -99,6 +99,7 @@ gcc -v
 [gcc/g++升级](https://blog.csdn.net/lingyunxianhe/article/details/95963862)
 
 ```bash
+add-apt-repository ppa:ubuntu-toolchain-r/test
 apt-get install software-properties-common
 apt-get update
 apt-get install gcc-9
