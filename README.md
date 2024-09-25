@@ -212,6 +212,15 @@ After installing Mask2Former, we need to download the pretrained [model](https:/
 We refer to [Detectron2](https://github.com/facebookresearch/detectron2/blob/main/INSTALL.md) and [Mask2Former](https://github.com/facebookresearch/Mask2Former/blob/main/INSTALL.md) for more installation support.
 
 
+### debug
+
+project_gaussians() missing 1 required positional argument : 'tile_bounds'
+
+```bash
+pip install gsplat==0.1.9
+```
+
+
 ## 2. Training your first model!
 
 The following will train a street-gaussians-ns model, our recommended model for real world AD scenes.
