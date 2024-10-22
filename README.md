@@ -241,7 +241,21 @@ python scripts/pythons/extract_waymo.py --waymo_root path/to/your/waymo_root --o
 解决No module named 'waymo_open_dataset'问题，参考[该答案](https://github.com/waymo-research/waymo-open-dataset/issues/611)，使用如下命令
 
 ```bash
+conda create -n split_data python=3.8
+y
+conda activate split_data
 pip install waymo-open-dataset-tf-2.6.0
+pip install numpy==1.21.1
+pip install cloudpickle
+pyyaml
+pytz
+imageio
+lazy_loader
+PyWavelets
+tifffile
+joblib
+threadpoolctl
+decorator
 ```
 
 After this step you will get our dataset format as follow:
