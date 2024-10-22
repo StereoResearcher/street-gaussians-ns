@@ -218,6 +218,7 @@ project_gaussians() missing 1 required positional argument : 'tile_bounds'
 
 ```bash
 pip install gsplat==0.1.9
+pip install gsplat==1.0.0
 ```
 
 
