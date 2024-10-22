@@ -241,7 +241,7 @@ python scripts/pythons/extract_waymo.py --waymo_root path/to/your/waymo_root --o
 解决No module named 'waymo_open_dataset'问题，参考[该答案](https://github.com/waymo-research/waymo-open-dataset/issues/611)，使用如下命令
 
 ```bash
-conda create -n split_data python=3.8
+conda create -n split_data python=3.10
 y
 conda activate split_data
 pip install tensorflow==2.11.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
@@ -253,6 +253,8 @@ tensorflow-io-gcs-filesystem==0.36.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
 tensorflow-metadata==1.13.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
 tensorflow-probability==0.19.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
 waymo-open-dataset-tf-2-11-0==1.6.1 -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+pip install open3d==0.16.0
 ```
 
 After this step you will get our dataset format as follow:
