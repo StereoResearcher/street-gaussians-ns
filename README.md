@@ -221,6 +221,8 @@ pip install gsplat==0.1.9
 ```
 
 
+
+
 ## 2. Training your first model!
 
 The following will train a street-gaussians-ns model, our recommended model for real world AD scenes.
@@ -232,7 +234,13 @@ Begin by downloading [dataset](https://console.cloud.google.com/storage/browser/
 Use the script to extract it to our data structure.
 
 ```
-python scripts/python/extract_waymo.py --waymo_root path/to/your/waymo_root --out_root path/to/your/out_root
+python scripts/pythons/extract_waymo.py --waymo_root path/to/your/waymo_root --out_root path/to/your/out_root
+```
+
+解决No module named 'waymo_open_dataset'问题，参考[该答案](https://github.com/waymo-research/waymo-open-dataset/issues/611)，使用如下命令
+
+```bash
+pip install waymo-open-dataset-tf-2.6.0
 ```
 
 After this step you will get our dataset format as follow:
