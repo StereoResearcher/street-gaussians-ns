@@ -282,6 +282,12 @@ clip root
   |-- annotation.json
 ```
 
+使用我们自己写的all_data.sh
+
+```code
+sh all_data.sh /remote-home/Cs_ai_qj_new/yjzhang_project/UrbanScenes/waymo_data/training
+```
+
 Then you can follow the ```data_process.sh``` to finish data processing.
 
 If you can't run ```segs_generate.py``` successfully, please try to copy it under ```dependencies/Mask2Former``` and run it again.
